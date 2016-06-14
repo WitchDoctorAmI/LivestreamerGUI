@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="242.0" prefWidth="347.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="livestreamergui.livestreamerController">
+   <children>
+      <Button fx:id="btnStart" layoutX="167.0" layoutY="192.0" mnemonicParsing="false" onAction="#btnStartAction" text="Stream starten" />
+      <ComboBox fx:id="cbStreams" layoutX="168.0" layoutY="73.0" prefWidth="150.0" />
+      <ComboBox fx:id="cbQuality" layoutX="168.0" layoutY="145.0" prefWidth="150.0" />
+      <RadioButton fx:id="radioList" layoutX="19.0" layoutY="77.0" mnemonicParsing="false" onAction="#radioListAction" selected="true" text="Liste">
+         <toggleGroup>
+            <ToggleGroup fx:id="tglgrp" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="radioText" layoutX="19.0" layoutY="110.0" mnemonicParsing="false" onAction="#radioTextAction" text="Eingabe" toggleGroup="$tglgrp" />
+      <Text layoutX="122.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Livestreamer Tool" wrappingWidth="102.615234375" />
+      <Button fx:id="btnEnd" layoutX="86.0" layoutY="192.0" mnemonicParsing="false" onAction="#btnEndAction" text="Beenden" />
+      <TextField fx:id="textfieldInput" layoutX="169.0" layoutY="106.0" onKeyPressed="#textfeldInputKey" />
+      <Text layoutX="19.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Stream wählen" wrappingWidth="86.99999831616879" />
+      <Text layoutX="18.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Qualität wählen" wrappingWidth="102.615234375" />
+   </children>
+</AnchorPane>
