@@ -7,3 +7,5 @@ Streams can be added via a textfile that will be created on first launch of the 
 
 VLC and Livestreamer have to be installed.
 Tested on Windows 10 with JRE 8u91.
+
+<img src="https://github.com/WitchDoctorAmI/LivestreamerGUI/blob/master/livestreamer1_1.png">
