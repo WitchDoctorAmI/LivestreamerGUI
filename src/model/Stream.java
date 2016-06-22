@@ -1,6 +1,13 @@
 package model;
 
+import com.google.gson.Gson;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
+import java.io.IOException;
+import java.net.URL;
+import java.nio.charset.StandardCharsets;
 import java.util.Objects;
+import java.util.Scanner;
 
 /**
  * Ein Objekt dieser Klasse repräsentiert einen Stream bestehend aus Namen und
@@ -36,6 +43,65 @@ public class Stream {
      * Konstruktor für Leeres Streamobjekt.
      */
     public Stream() {
+    }
+
+    /**
+     * Prüft, ob der Stream online ist.
+     *
+     * @return Liefert True, falls der Stream online ist.
+     */
+    public boolean istStreamOnline() {
+        //Initialisierung Rückgabevariable
+        boolean istOnline;
+        //Holt den Channelnamen des Channels
+        String channelname = this.getUrl()
+                .substring(url.lastIndexOf("/") + 1, url.length());
+
+        //API Adresse
+        String channelUrl = "https://api.twitch.tv/kraken/streams/"
+                + channelname;
+
+        //Variable für den JSON Text
+        String jsonText = null;
+
+        try {
+            //Holt den aktuellen JSON String über die Twitch API
+            jsonText = readFromUrl(channelUrl);
+        } catch (IOException ex) {
+            System.out.println(ex.getMessage());
+        }
+        //Neuen Parser holen
+        JsonParser parser = new JsonParser();
+        //Parst den JSON Text als JSON Objekt
+        JsonObject json = parser.parse(jsonText).getAsJsonObject();
+
+        //Setzen des Onlinestatus
+        istOnline = !json.get("stream").isJsonNull();
+
+        //Rückgabe Ergebnis
+        return istOnline;
+    }
+
+    /**
+     * Ruft die angegebene URL auf und liest den Text den die URL liefert.
+     *
+     * @param url URL die aufgerufen werden soll.
+     * @return Kopierter Text.
+     * @throws IOException Wird geworfen, falls ein Zugriffsfehler auftritt.
+     */
+    private static String readFromUrl(String url) throws IOException {
+        //URL
+        URL seite = new URL(url);
+        //Neuer Stringbuilder
+        StringBuilder stringbuilder = new StringBuilder();
+        //Greift mit dem Scanner auf die URL zu und baut einen String aus dem Text.
+        try (Scanner scanner = new Scanner(seite.openStream(), StandardCharsets.UTF_8.name())) {
+            while (scanner.hasNextLine()) {
+                stringbuilder.append(scanner.nextLine());
+            }
+        }
+        //Rückgabe Ergebnisstring
+        return stringbuilder.toString();
     }
 
     /**

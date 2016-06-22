@@ -14,6 +14,8 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 
@@ -43,6 +45,8 @@ public class livestreamerController implements Initializable {
     private Button btnEnd;
     @FXML
     private TextField textfieldInput;
+    @FXML
+    private ImageView imageView;
     //Generierter Code Ende
 
     /**
@@ -59,6 +63,7 @@ public class livestreamerController implements Initializable {
         // Hier werden die Comboboxen gefüllt.
         this.setQuality();
         this.setStreams();
+
     }
 
     /**
@@ -93,6 +98,8 @@ public class livestreamerController implements Initializable {
         cbStreams.setItems(LivestreamerGUI.getStreams());
         //Erstes Item auswählen
         cbStreams.getSelectionModel().selectFirst();
+        //Prüft, ob der erstausgewählte Stream online ist.
+        cbStreamsAction(new ActionEvent());
 
     }
 
@@ -184,6 +191,21 @@ public class livestreamerController implements Initializable {
         //Bei Entertaste im Textfeld wird so geöffnet.
         if (event.getCode().equals(KeyCode.ENTER)) {
             btnStartAction(new ActionEvent());
+        }
+    }
+
+    /**
+     * Steuert das Verhalten bei Auswahl eines Streams.
+     * Icons von https://www.iconfinder.com/designmodo.
+     * @param event Auslösendes Event.
+     */
+    @FXML
+    private void cbStreamsAction(ActionEvent event) {
+        //Prüft, ob der der ausgewählte Stream online ist.
+        if (cbStreams.getSelectionModel().getSelectedItem().istStreamOnline()) {
+            imageView.setImage(new Image("/checkmark.png"));
+        } else {
+            imageView.setImage(new Image("/cross.png"));
         }
     }
 }
