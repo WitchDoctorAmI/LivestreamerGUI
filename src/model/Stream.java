@@ -1,6 +1,5 @@
 package model;
 
-import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import java.io.IOException;
@@ -94,8 +93,10 @@ public class Stream {
         URL seite = new URL(url);
         //Neuer Stringbuilder
         StringBuilder stringbuilder = new StringBuilder();
-        //Greift mit dem Scanner auf die URL zu und baut einen String aus dem Text.
-        try (Scanner scanner = new Scanner(seite.openStream(), StandardCharsets.UTF_8.name())) {
+        //Greift mit dem Scanner auf die URL zu und baut einen String
+        //aus dem Text.
+        try (Scanner scanner = new Scanner(seite.openStream(),
+                StandardCharsets.UTF_8.name())) {
             while (scanner.hasNextLine()) {
                 stringbuilder.append(scanner.nextLine());
             }
@@ -172,6 +173,12 @@ public class Stream {
     @Override
     public String toString() {
         return this.name;
+    }
+
+    public void setOnlineStatus() {
+        if (this.istStreamOnline()) {
+            this.setName(this.getName() + " (online)");
+        }
     }
 
 }

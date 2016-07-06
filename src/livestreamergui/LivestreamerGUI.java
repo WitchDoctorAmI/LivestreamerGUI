@@ -126,6 +126,8 @@ public class LivestreamerGUI extends Application {
                     stream.setName(gesplittet[0]);
                     //Teil 2 des Splits: Streamurl
                     stream.setUrl(gesplittet[1]);
+                    
+                    stream.setOnlineStatus();
                     //Zur Collection hinzufügen
                     LivestreamerGUI.STREAMS.add(stream);
                 }

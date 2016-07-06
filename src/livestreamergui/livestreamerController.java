@@ -63,7 +63,7 @@ public class livestreamerController implements Initializable {
         // Hier werden die Comboboxen gefüllt.
         this.setQuality();
         this.setStreams();
-
+        
     }
 
     /**
@@ -100,7 +100,7 @@ public class livestreamerController implements Initializable {
         cbStreams.getSelectionModel().selectFirst();
         //Prüft, ob der erstausgewählte Stream online ist.
         cbStreamsAction(new ActionEvent());
-
+        
     }
 
     /**
@@ -134,11 +134,11 @@ public class livestreamerController implements Initializable {
             rt.exec("cmd.exe /c start " + aufruf);
             //Beenden der LivestreamerGUI
             beenden();
-
+            
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
-
+        
     }
 
     /**
@@ -195,8 +195,9 @@ public class livestreamerController implements Initializable {
     }
 
     /**
-     * Steuert das Verhalten bei Auswahl eines Streams.
-     * Icons von https://www.iconfinder.com/designmodo.
+     * Steuert das Verhalten bei Auswahl eines Streams. Icons von
+     * https://www.iconfinder.com/designmodo.
+     *
      * @param event Auslösendes Event.
      */
     @FXML
