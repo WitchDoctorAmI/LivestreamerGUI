@@ -31,7 +31,7 @@ public class LivestreamerGUI extends Application {
     /**
      * Titel der Applikation.
      */
-    public static final String TITEL = "Livestreamer GUI - Version 1.2";
+    public static final String TITEL = "Livestreamer GUI - Version 1.3";
 
     /**
      * Collection der Streams. Wird beim Softwarestart befüllt.
@@ -126,7 +126,7 @@ public class LivestreamerGUI extends Application {
                     stream.setName(gesplittet[0]);
                     //Teil 2 des Splits: Streamurl
                     stream.setUrl(gesplittet[1]);
-                    
+                    //Onlinestatus in die Combobox setzen.
                     stream.setOnlineStatus();
                     //Zur Collection hinzufügen
                     LivestreamerGUI.STREAMS.add(stream);

@@ -15,6 +15,7 @@ import java.util.Scanner;
  * @author Simon Mönkebüscher
  * @since 2016-06-11 Erstellung
  * @since 2016-06-14 Doku vervollständigt
+ * @since 2016-07-06 Onlinestatus setzen implementiert.
  */
 public class Stream {
 
@@ -175,6 +176,9 @@ public class Stream {
         return this.name;
     }
 
+    /**
+     * Setzt den Onlinestatus in die Combobox.
+     */
     public void setOnlineStatus() {
         if (this.istStreamOnline()) {
             this.setName(this.getName() + " (online)");

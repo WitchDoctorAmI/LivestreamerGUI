@@ -70,7 +70,7 @@
     properties which you can use, check the target you are overriding in the
     nbproject/build-impl.xml file. 
 
-    
+-->    
     <target name="do-deploy-bundle" depends="jar">
         <property name="tmp.file" value="temp_final.jar"/>
 
@@ -99,5 +99,5 @@
         <delete file="${bundle-dist.dir}/${tmp.file}" />
         <delete dir="${bundle-dist.dir}"/>
     </target>
--->
+
 </project>
