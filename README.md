@@ -10,7 +10,7 @@ VLC and Livestreamer have to be installed.
 Tested on Windows 10 with JRE 8u91.
 <br><br>
 Main GUI:<br>
-<img src="https://github.com/WitchDoctorAmI/LivestreamerGUI/blob/master/livestreamer1_3a.png">
+<img src="https://github.com/WitchDoctorAmI/LivestreamerGUI/blob/master/livestreamer1_3_1a.png">
 <br>
 Combobox opened:<br>
-<img src="https://github.com/WitchDoctorAmI/LivestreamerGUI/blob/master/livestreamer1_3b.png">
+<img src="https://github.com/WitchDoctorAmI/LivestreamerGUI/blob/master/livestreamer1_3_1b.png">
