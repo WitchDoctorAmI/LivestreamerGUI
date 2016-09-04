@@ -31,7 +31,7 @@ public class LivestreamerGUI extends Application {
     /**
      * Titel der Applikation.
      */
-    public static final String TITEL = "Livestreamer GUI - Version 1.3";
+    public static final String TITEL = "Livestreamer GUI - Version 1.3.1";
 
     /**
      * Collection der Streams. Wird beim Softwarestart befüllt.

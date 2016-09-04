@@ -6,21 +6,20 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="218.0" prefWidth="402.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="livestreamergui.livestreamerController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="190.0" prefWidth="402.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="livestreamergui.livestreamerController">
    <children>
-      <Button fx:id="btnStart" layoutX="177.0" layoutY="179.0" mnemonicParsing="false" onAction="#btnStartAction" text="Stream starten" />
-      <ComboBox fx:id="cbStreams" layoutX="174.0" layoutY="49.0" onAction="#cbStreamsAction" prefHeight="25.0" prefWidth="182.0" />
-      <ComboBox fx:id="cbQuality" layoutX="174.0" layoutY="121.0" prefHeight="25.0" prefWidth="182.0" />
-      <RadioButton fx:id="radioList" layoutX="25.0" layoutY="53.0" mnemonicParsing="false" onAction="#radioListAction" selected="true" text="Liste">
+      <Button fx:id="btnStart" layoutX="183.0" layoutY="144.0" mnemonicParsing="false" onAction="#btnStartAction" text="Stream starten" />
+      <ComboBox fx:id="cbStreams" layoutX="180.0" layoutY="14.0" onAction="#cbStreamsAction" prefHeight="25.0" prefWidth="182.0" visibleRowCount="30" />
+      <ComboBox fx:id="cbQuality" layoutX="180.0" layoutY="86.0" prefHeight="25.0" prefWidth="182.0" />
+      <RadioButton fx:id="radioList" layoutX="31.0" layoutY="18.0" mnemonicParsing="false" onAction="#radioListAction" selected="true" text="Liste">
          <toggleGroup>
             <ToggleGroup fx:id="tglgrp" />
          </toggleGroup>
       </RadioButton>
-      <RadioButton fx:id="radioText" layoutX="25.0" layoutY="86.0" mnemonicParsing="false" onAction="#radioTextAction" text="Eingabe" toggleGroup="$tglgrp" />
-      <Button fx:id="btnEnd" layoutX="95.0" layoutY="179.0" mnemonicParsing="false" onAction="#btnEndAction" text="Beenden" />
-      <TextField fx:id="textfieldInput" layoutX="175.0" layoutY="82.0" onKeyPressed="#textfeldInputKey" prefHeight="25.0" prefWidth="182.0" />
-      <Text layoutX="25.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Stream wählen" wrappingWidth="86.99999831616879" />
-      <Text layoutX="24.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Qualität wählen" wrappingWidth="102.615234375" />
-      <ImageView fx:id="imageView" fitHeight="25.0" fitWidth="31.0" layoutX="366.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true" />
+      <RadioButton fx:id="radioText" layoutX="31.0" layoutY="51.0" mnemonicParsing="false" onAction="#radioTextAction" text="Eingabe" toggleGroup="$tglgrp" />
+      <Button fx:id="btnEnd" layoutX="101.0" layoutY="144.0" mnemonicParsing="false" onAction="#btnEndAction" text="Beenden" />
+      <TextField fx:id="textfieldInput" layoutX="181.0" layoutY="47.0" onKeyPressed="#textfeldInputKey" prefHeight="25.0" prefWidth="182.0" />
+      <Text layoutX="30.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Qualität wählen" wrappingWidth="102.615234375" />
+      <ImageView fx:id="imageView" fitHeight="25.0" fitWidth="31.0" layoutX="363.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
    </children>
 </AnchorPane>
