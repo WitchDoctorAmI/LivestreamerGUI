@@ -8,5 +8,9 @@ If you add streams from twitch the online status will be checked, so you can see
 
 VLC and Livestreamer have to be installed.
 Tested on Windows 10 with JRE 8u91.
-
-<img src="https://github.com/WitchDoctorAmI/LivestreamerGUI/blob/master/livestreamer1_2.png">
+<br><br>
+Main GUI:<br>
+<img src="https://github.com/WitchDoctorAmI/LivestreamerGUI/blob/master/livestreamer1_3a.png">
+<br>
+Combobox opened:<br>
+<img src="https://github.com/WitchDoctorAmI/LivestreamerGUI/blob/master/livestreamer1_3b.png">
