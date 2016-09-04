@@ -7,7 +7,7 @@ Streams can be added via a textfile that will be created on first launch of the 
 If you add streams from twitch the online status will be checked, so you can see if the stream is online or not.
 
 VLC and Livestreamer have to be installed.
-Tested on Windows 10 with JRE 8u91.
+Tested on Windows 10 with JRE 8u102.
 <br><br>
 Main GUI:<br>
 <img src="https://github.com/WitchDoctorAmI/LivestreamerGUI/blob/master/livestreamer1_3_1a.png">
