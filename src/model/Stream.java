@@ -5,6 +5,7 @@ import com.google.gson.JsonParser;
 import java.io.IOException;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
+import java.util.HashSet;
 import java.util.Objects;
 import java.util.Scanner;
 
@@ -20,6 +21,10 @@ import java.util.Scanner;
 public class Stream {
 
     /**
+     * Client-ID des Tools.
+     */
+    private static final String CLIENTID = "ocypvss0sfm43pnx3gj8pnhwtlapcqw";
+    /**
      * Name des Stream.
      */
     private String name;
@@ -27,6 +32,8 @@ public class Stream {
      * URL des Stream.
      */
     private String url;
+
+    private HashSet<String> qualitaet;
 
     /**
      * Konstruktor für vollständiges Sreamobjekt.
@@ -37,6 +44,7 @@ public class Stream {
     public Stream(String name, String url) {
         this.url = url;
         this.name = name;
+        this.qualitaet = new HashSet<>();
     }
 
     /**
@@ -59,7 +67,7 @@ public class Stream {
 
         //API Adresse
         String channelUrl = "https://api.twitch.tv/kraken/streams/"
-                + channelname;
+                + channelname + "?client_id=" + this.CLIENTID;
 
         //Variable für den JSON Text
         String jsonText = null;
@@ -77,6 +85,11 @@ public class Stream {
 
         //Setzen des Onlinestatus
         istOnline = !json.get("stream").isJsonNull();
+
+        //Setzt bei Onlinestream die Qualitätsstufen in das Streamobjekt
+        if (istOnline) {
+            this.setzeQualitaet(json);
+        }
 
         //Rückgabe Ergebnis
         return istOnline;
@@ -183,6 +196,10 @@ public class Stream {
         if (this.istStreamOnline()) {
             this.setName(this.getName() + " (online)");
         }
+    }
+
+    private void setzeQualitaet(JsonObject json) {
+//        System.out.println(json.toString());
     }
 
 }

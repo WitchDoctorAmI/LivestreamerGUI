@@ -31,7 +31,7 @@ public class LivestreamerGUI extends Application {
     /**
      * Titel der Applikation.
      */
-    public static final String TITEL = "Livestreamer GUI - Version 1.3.1";
+    public static final String TITEL = "Livestreamer GUI - Version 1.3.2";
 
     /**
      * Collection der Streams. Wird beim Softwarestart befüllt.
@@ -161,7 +161,7 @@ public class LivestreamerGUI extends Application {
         //der immer verfügbar sein sollte.
         String inhalt = ""
                 + "# Streams im Format \"Name URL\" eintragen, z.B. "
-                + "\"Rocketbeans twitch.tv/rocketbeanstv\""
+                + "\"StreamerHouse twitch.tv/streamerhouse\""
                 + newline
                 + "# Keine Leerzeichen im Streamnamen nutzen!"
                 + newline
@@ -169,7 +169,7 @@ public class LivestreamerGUI extends Application {
                 + newline
                 + "# Bei Programmstart wird diese Liste eingelesen."
                 + newline
-                + "Rocketbeans twitch.tv/rocketbeanstv";
+                + "StreamerHouse twitch.tv/streamerhouse";
 
         try {
             //Neue Datei, die erzeugt wird

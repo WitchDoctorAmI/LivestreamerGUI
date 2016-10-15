@@ -6,7 +6,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="190.0" prefWidth="402.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="livestreamergui.livestreamerController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="190.0" prefWidth="402.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="livestreamergui.LivestreamerController">
    <children>
       <Button fx:id="btnStart" layoutX="183.0" layoutY="144.0" mnemonicParsing="false" onAction="#btnStartAction" text="Stream starten" />
       <ComboBox fx:id="cbStreams" layoutX="180.0" layoutY="14.0" onAction="#cbStreamsAction" prefHeight="25.0" prefWidth="182.0" visibleRowCount="30" />
